@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{%block content%}
+    <img src="{{WebShop.img.url}}">
+    <h4 class="blog-title">{{WebShop.title|stringformat:".10s"}}</h1>
+    <h5 class="blog-text">{{WebShop.text|stringformat:".10s"}}</h1>
+{%endblock content%}

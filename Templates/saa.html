@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Serial Data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <button id="start-btn">Start</button>
+    <p id="weight-value"></p>
+
+    <script>
+        $(document).ready(function() {
+            var port = prompt('Enter the serial port:');
+            if (port) {
+                $('#start-btn').click(function() {
+                    setInterval(function() {
+                        $.ajax({
+                            url: 'http://127.0.0.1:8000/Apis/api/usb-ports/',
+                            method: 'POST',
+                            data: { 'serial_port': port },
+                            success: function(response) {
+                                $('#weight-value').text(response);
+                            },
+                            error: function(xhr, textStatus, error) {
+                                console.log('Error:', error);
+                            }
+                        });
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Serial Data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <button id="start-btn">Start</button>
+    <p id="weight-value"></p>
+
+    <script>
+        $(document).ready(function() {
+            var port = prompt('Enter the serial port:');
+            if (port) {
+                $('#start-btn').click(function() {
+                    setInterval(function() {
+                        $.ajax({
+                            url: 'https://abdulhodiy200411.pythonanywhere.com/Api/set-serial-port/', // Server manzilingizga o'zgartiring
+                            method: 'POST',
+                            data: { 'serial_port': port },
+                            success: function(response) {
+                                $('#weight-value').text(response);
+                            },
+                            error: function(xhr, textStatus, error) {
+                                console.log('Error:', error);
+                            }
+                        });
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

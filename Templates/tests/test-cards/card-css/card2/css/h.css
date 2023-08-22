@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: rgb(255, 255, 255);
+}
+.cont {
+    width: fit-content;
+    border-radius: 20px;
+    height: fit-content;
+    border: solid 2px;
+    padding: 2px;
+}
+.card-img {
+    border-radius: 19px;
+    border: solid green 3px;
+
+}
+.card-price {
+    color: green;
+    font-size: 20px;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+}
+.card-tit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 5px;
+    border-bottom: solid rgb(198, 198, 198) 1px;
+}
+.card-link{
+    position: relative;
+    left: 10px;
+}
+.le-mor{
+    text-decoration: none;
+}

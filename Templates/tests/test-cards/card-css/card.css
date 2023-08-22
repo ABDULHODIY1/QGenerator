@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.p-r{
+    color: green;
+    transform: translate(-50%,-50%,-50%,);
+    z-index: 1;
+    position: relative;
+    top: -26vh;
+    left: 10px;
+}
+.container{
+    border-radius: 20px;
+    width: fit-content;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    border-radius: 20px;
+}
+.card-i{
+    border-radius: 20px;
+    border: solid green 2px;
+    box-shadow: 40px 50px 40px -25px;
+}

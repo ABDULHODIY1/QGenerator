@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+body {
+  background-color: #D2DBDD;
+   /* display: grid;
+  grid-template-columns: auto auto auto auto auto; */
+  /* -webkit-justify-content: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  align-items: center; */
+}
+.cards {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  max-width: 820px;
+}
+.card__like {
+  width: 18px;
+}
+.card__clock {
+  width: 15px;
+  vertical-align: middle;
+  fill: #AD7D52;
+}
+.card__time {
+  font-size: 12px;
+  color: #AD7D52;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.card__clock-info {
+  position: relative;
+  left: 40%;
+  top: -24px;
+}
+.card__img {
+  visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.card__info-hover {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+.card__img--hover {
+  transition: 0.2s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0;
+}
+.card {
+  margin-right: 25px;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.10, 1.10);
+}
+.card__info {
+  z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 24px 24px 24px;
+}
+.card__category {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #868686;
+}
+.card__title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Slab', serif;
+}
+.card__by {
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+.card__author {
+  font-weight: 600;
+  text-decoration: none;
+  color: #AD7D52;
+}
+.card:hover .card__img--hover {
+  height: 100%;
+  opacity: 0.3;
+}
+.card:hover .card__info {
+  background-color: transparent;
+  position: relative;
+}
+.card:hover .card__info-hover {
+  opacity: 1;
+}
+body {
+  background: #ffffff;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  position: relative;
+  margin: 100px;
+  border: solid lawngreen 2px;
+  width: fit-content;
+  border-radius: 20px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+  height: auto;
+  padding: 30px;
+}
+h5 {
+  position: relative;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+
+}
+p {
+  position: relative;
+  left: 0%;
+  color: rgb(0, 0, 0);
+}
+.img {
+  position: relative;
+  border-radius: 20px;
+}
+.text1 {
+  position: relative;
+  max-width: 300px;
+}
+.text2 {
+  position: relative;
+  min-width: 290px;
+}
+.img {
+  border-radius: 20px;
+}
+.urls {
+  position: relative;
+  left: 60%;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: rgb(255, 255, 255);
+}
+.cont {
+  width: fit-content;
+  border-radius: 20px;
+  height: fit-content;
+  border: solid 2px;
+  padding: 2px;
+}
+.card-img {
+  border-radius: 19px;
+  border: solid green 3px;
+  float: left;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.card-price {
+  color: green;
+  font-size: 20px;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+}
+.card-tit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  bottom: 5px;
+  border-bottom: solid rgb(198, 198, 198) 1px;
+}
+.card-link {
+  position: relative;
+  left: 10px;
+}
+.le-mor {
+  text-decoration: none;
+}
+.cont-cr {
+  display: none; 
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cont-inp {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.cont-inp button {
+  margin-top: 10px;
+}
+
+.Container1 {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.Cont {
+  display: flex;
+  align-items: center;
+}
+
+.Simple-card {
+  display: flex;
+  align-items: center;
+}
+
+.Card-tit {
+  display: flex;
+  align-items: center;
+}
+
+.Card-price {
+  display: flex;
+  align-items: center;
+}
+
+.Card-link {
+  display: flex;
+  align-items: center;
+}
+
+.Delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+}
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.post {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.post-content {
+  display: flex;
+  align-items: center;
+}
+
+.post-image {
+  max-width: 100%;
+  margin-right: 10px;
+}
+
+.post-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-actions {
+  margin-left: auto;
+}
+
+.open-form-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.close-form-button {
+  margin-top: 10px;
+}
+
+/* Diğer stillendirme kurallarını buraya ekleyebilirsiniz */

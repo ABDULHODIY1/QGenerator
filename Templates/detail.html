@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+
+
+
+{%block content%}
+<center>
+    <div class="container">
+    <img src="{{WebShop.img.url}}" class="img" width="500">
+    <center>
+        <div class="title">
+            <h5>
+                {{WebShop.title}}
+            </h5>
+        </div>
+    </center>
+    <div class="text1">
+        <p id="text2">
+            {{WebShop.text}}
+        </p>
+    </div>
+    <div class="urls">
+        <!-- <h1><a href="{% url 'update' WebShop.pk%}">edit</a></h1> -->
+        <!-- <h1 style="margin: 50px;"><a href="{%url 'test-show'%}">SHOW POSTS SHOW</a></h1> -->
+    </div>
+</div> 
+
+</center>
+<!-- <a href="{%url 'delete' WebShop.pk%}" class="delete">this is post delete</a> -->
+
+
+
+{%endblock content%}

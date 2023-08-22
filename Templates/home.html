@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  {% extends 'base.html' %}
+
+  {% block content %}
+  {% for WebShop in WebShop.all %}
+  <div class="Container1" style="position: relative; width: fit-content; ">
+    <div class="Cont" style="background-color: #f5f5f5;">
+      <div class="Simple-card">
+        <img class="Card-img" src="{{ WebShop.img.url }}" alt="..."
+          style="max-width: 35px; margin-right: 10px; float: right;">
+        <div>
+          <h5 class="Card-tit" style="margin-right: 20px; margin-left: 20px;">{{ WebShop.title|slice:":10" }}</h5>
+        </div>
+        <div class="card-p">
+          <p style="position: relative; display: inline;">
+            narxi
+          </p>
+          <p class="Card-price">{{ WebShop.price }}</p>
+        </div>
+      </div>
+      <div class="Card-link" style="margin-right: 20px; margin-left: 20px;">
+        <a href="{% url 'detail' WebShop.pk %}" class="Le-mor">learn more</a>
+        <form method="post" action="{% url 'post-delete' WebShop.pk %}">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ request.path }}">
+          <button type="submit"
+            style="background-color: red; color: white; border-radius: 60%; border:green solid 2px; padding: 1px; margin-left: 100px;">X</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% empty %}
+  <p>No posts available.</p>
+  {% endfor %}
+
+  <button id="openForm" style="position: absolute;" onclick="openForm()">Open Form</button>
+
+  <div class="cont-r">
+    <div class="cont-inp" id="formContainer" style="display: none;">
+      <ul>
+        <li>
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+          </form>
+        </li>
+      </ul>
+      <button id="closeForm" onclick="closeForm()">Close Form</button>
+    </div>
+  </div>
+
+  <script>
+    function openForm() {
+      var formContainer = document.getElementById('formContainer');
+      formContainer.style.display = 'block';
+    }
+
+    function closeForm() {
+      var formContainer = document.getElementById('formContainer');
+      formContainer.style.display = 'none';
+    }
+  </script>
+
+  <style>
+    .posts-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .post {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .post-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .post-image {
+      max-width: 100%;
+      margin-right: 10px;
+    }
+
+    .post-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post-actions {
+      margin-left: auto;
+    }
+
+    .open-form-button {
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+
+    .close-form-button {
+      margin-top: 10px;
+    }
+
+    #openForm {
+      background: green;
+      color: black;
+      padding: 5px;
+      left: 90%;
+      border-radius: 20px;
+      bottom: 95%;
+    }
+
+    p {
+      width: fit-content;
+    }
+
+    .cont-inp {
+      z-index: 2;
+      transform: translate(50%, 50%, 50%);
+      box-shadow: 2px 2px 19px rgba(0, 0, 0, 0.5);
+    }
+
+    #id_text {
+      position: relative;
+      right: 11%;
+    }
+  </style>
+
+  <div id="delete-confirmation" style="display: none;">
+    <h3>Confirm Deletion</h3>
+    <p>Are you sure you want to delete this post?</p>
+    <form method="post" id="delete-form" style="display: inline;">
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ request.path }}">
+      <button type="submit">Delete</button>
+    </form>
+    <button onclick="closeDeleteConfirmation()">Cancel</button>
+  </div>
+
+  <script>
+    function deletePost() {
+      document.getElementById('delete-form').submit();
+    }
+
+    function closeDeleteConfirmation() {
+      var deleteConfirmation = document.getElementById('delete-confirmation');
+      deleteConfirmation.style.display = 'none';
+    }
+  </script>
+  {% endblock content %}
+
+</body>
+
+</html>

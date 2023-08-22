@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "web_store",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.black-formatter"
+		},
+		"python.formatting.provider": "none"
+	}
+}

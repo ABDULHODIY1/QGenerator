@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="cont-cr" style="position: relative; top: 100px; display: flex; justify-content: center;">
+    <div class="cont-inp">
+        <ul>
+            <li>
+                <form method="post" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    {{form.as_p}}
+                    <button type="submit" style="background: green; border-radius: 20px; border: solid 2px orange; padding: 0 20px 0 20px; scroll-padding-block-end: 5px;">submit</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+<style>
+    #id_title{
+        margin: 20px 0 20px 0;
+        border-radius: 20px;
+    }
+    #id_price{
+        margin: 20px 0 20px 0;
+        border-radius: 20px;
+    }
+    #id_text{
+        margin: 20px 0 20px 0;
+        border-radius: 20px;
+    }
+</style>
+{% endblock content %}

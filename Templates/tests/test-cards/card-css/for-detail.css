@@ -1,0 +1,64 @@
+body{
+    background: #ffffff;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    position: relative;
+    border: solid lawngreen 2px;
+    width: fit-content;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px 10px rgb(0, 0, 0) ;
+    backdrop-filter: blur(2px);
+    left: 40%;
+    top: 150px;
+    width: fit-content;
+    height: auto;
+    padding: 30px;
+}
+#im{
+    border-radius: 20px;
+}
+h5{
+    position: relative;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    
+}
+
+p{
+    position: relative;
+    left: 0%;
+    color: rgb(0, 0, 0);
+
+}
+
+#im:hover{
+    transition: 4s;
+    visibility: hidden;
+}
+
+.container:hover{
+    transition: 4s;
+    background-size: cover;
+}
+
+.img{
+    position:relative;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+}
+.text1{
+    position: relative;
+    max-width: 300px;
+}
+.text2{
+    position: relative;
+    min-width: 290px;
+}
+.img{
+    border-radius: 20px;
+}

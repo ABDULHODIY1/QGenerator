@@ -1,0 +1,15 @@
+/Users/abdulhodiy/PycharmProjects/app12/web_store/obj/Debug/net7.0/web_store.csproj.AssemblyReference.cache
+/Users/abdulhodiy/PycharmProjects/app12/web_store/obj/Debug/net7.0/web_store.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abdulhodiy/PycharmProjects/app12/web_store/obj/Debug/net7.0/web_store.AssemblyInfoInputs.cache
+/Users/abdulhodiy/PycharmProjects/app12/web_store/obj/Debug/net7.0/web_store.AssemblyInfo.cs
+/Users/abdulhodiy/PycharmProjects/app12/web_store/obj/Debug/net7.0/web_store.csproj.CoreCompileInputs.cache
+/Users/abdulhodiy/PycharmProjects/app12/web_store/bin/Debug/net7.0/web_store
+/Users/abdulhodiy/PycharmProjects/app12/web_store/bin/Debug/net7.0/web_store.deps.json
+/Users/abdulhodiy/PycharmProjects/app12/web_store/bin/Debug/net7.0/web_store.runtimeconfig.json
+/Users/abdulhodiy/PycharmProjects/app12/web_store/bin/Debug/net7.0/web_store.dll
+/Users/abdulhodiy/PycharmProjects/app12/web_store/bin/Debug/net7.0/web_store.pdb
+/Users/abdulhodiy/PycharmProjects/app12/web_store/obj/Debug/net7.0/web_store.dll
+/Users/abdulhodiy/PycharmProjects/app12/web_store/obj/Debug/net7.0/refint/web_store.dll
+/Users/abdulhodiy/PycharmProjects/app12/web_store/obj/Debug/net7.0/web_store.pdb
+/Users/abdulhodiy/PycharmProjects/app12/web_store/obj/Debug/net7.0/web_store.genruntimeconfig.cache
+/Users/abdulhodiy/PycharmProjects/app12/web_store/obj/Debug/net7.0/ref/web_store.dll

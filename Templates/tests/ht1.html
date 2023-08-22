@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp For Forms</title>
+</head>
+<body>
+    <form method="post">
+        <div class="container">
+            <input id="id_title" placeholder="This Is Title" ></input>
+            <input type="text">
+            <textarea name="Text" id="id_text" cols="30" rows="10"></textarea>
+            <button type="submit">submit</button>
+        </div>
+    </form>
+
+<style>
+    .container{
+        background: red;
+
+    }
+</style>
+</body>
+</html> -->
+
+<!-- posts.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Posts</title>
+</head>
+<body>
+    <h1>Posts</h1>
+    {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+            <button class="delete-post" data-post-id="{{ post.id }}">Delete</button>
+        </div>
+    {% endfor %}
+
+    <!-- Delete confirmation modal -->
+    <div id="delete-modal" style="display: none;">
+        <h3>Confirm Deletion</h3>
+        <p>Are you sure you want to delete this post?</p>
+        <button id="confirm-delete">Delete</button>
+        <button id="cancel-delete">Cancel</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Delete button click event
+            $('.delete-post').click(function() {
+                var postId = $(this).data('post-id');
+                $('#confirm-delete').data('post-id', postId);  // Set post id in delete button
+                $('#delete-modal').show();  // Show delete confirmation modal
+            });
+
+            // Confirm delete button click event
+            $('#confirm-delete').click(function() {
+                var postId = $(this).data('post-id');
+                $.ajax({
+                    url: '/posts/delete/' + postId + '/',
+                    method: 'POST',
+                    data: { csrfmiddlewaretoken: '{{ csrf_token }}' },
+                    success: function() {
+                        $('#delete-modal').hide();  // Hide delete confirmation modal
+                        $('.post[data-post-id="' + postId + '"]').remove();  // Remove deleted post from the page
+                    }
+                });
+            });
+
+            // Cancel delete button click event
+            $('#cancel-delete').click(function() {
+                $('#delete-modal').hide();  // Hide delete confirmation modal
+            });
+        });
+    </script>
+</body>
+</html>
